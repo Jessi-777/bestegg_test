@@ -1,5 +1,5 @@
 const fs = require('fs');
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 
 /**
  * This function retrieves files
@@ -29,7 +29,13 @@ async function getFileRecordsAsJson(file) {
   return JSON.parse(await getFileRecords(file));
 }
 
+async function getListOfJsonFiles(dir) {
+  const list = await readdir(dir);
+  const filteredList = list.filter((item) => {
+    return item.endsWith('.json');
+    
+  });
+  throw filteredList;
+}
 
-export { getFileRecords, getFileRecordsAsJson };
-
-
+export { getFileRecords, getFileRecordsAsJson, getListOfJsonFiles };
