@@ -1,19 +1,21 @@
 import { getFileRecords } from '../record';
 
-const goodread_mock = jest.fn((anything) => console.log(anything));
-
 describe('testingGetFileRecords', () => {
-  test('goodread', () => {
-    // expect(() => getFileRecords('../records1.json', undefined)).not.toBe(null);
-    getFileRecords('../records1.json', goodread_mock);
-    expect(goodread_mock.toHaveBeenCalled()).toBe(true);
+  test('goodread', async () => {
+   
+    const result = await getFileRecords(
+      './src/js/records1.json',
+    
+    );
+    expect(result.length).toBe(138411);
   });
 
-  //   test('goodread', () => {});
-
-  //   test('goodread', () => {});
+  test('badread', async () => {
+   
+    const result = await getFileRecords(
+      '../recordsdoesnotexist.json',
+     
+    );
+    expect(result).toBe(false);
+  });
 });
-
-// test('goodread', () => {});
-
-//   test('goodread', () => {});

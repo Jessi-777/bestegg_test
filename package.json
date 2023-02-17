@@ -1,6 +1,6 @@
 {
   "name": "bestegg_test",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "assessment test for best egg",
   "main": "index.js",
   "type": "module",
