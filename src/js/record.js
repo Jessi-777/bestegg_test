@@ -2,9 +2,9 @@ const fs = require('fs');
 import { readFile } from 'node:fs/promises';
 
 /**
- * This function adds one to its input.
- * @param {number} input any number
- * @returns {number} that number, plus one.
+ * This function retrieves files
+ * @param { string } file path to the file.
+ * @returns { string | false } returns contents of the file.
  */
 
 async function getFileRecords(file) {
