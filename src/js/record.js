@@ -19,4 +19,17 @@ async function getFileRecords(file) {
     return false;
   }
 }
-export { getFileRecords };
+
+/**
+ * This function retrieves files
+ * @param { string } file path to the file.
+ * @returns { object | false } returns contents of the file as JSON.
+ */
+async function getFileRecordsAsJson(file) {
+  return JSON.parse(await getFileRecords(file));
+}
+
+
+export { getFileRecords, getFileRecordsAsJson };
+
+

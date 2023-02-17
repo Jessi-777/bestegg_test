@@ -1,8 +1,8 @@
 {
   "name": "bestegg_test",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "assessment test for best egg",
-  "main": "index.js",
+  "main": "src/js/record.js",
   "type": "module",
   "scripts": {
     "docs": "documentation build src/js/** -f html -o docs/docs",
