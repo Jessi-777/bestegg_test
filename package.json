@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Jessi-777/bestegg_test#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
+    "documentation": "^14.0.1",
     "jest": "^29.4.3"
   }
 }
