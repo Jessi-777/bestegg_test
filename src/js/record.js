@@ -4,7 +4,8 @@ import { readFile, readdir } from 'node:fs/promises';
 /**
  * This function retrieves files.
  * @param { string } file path to the file.
- * @returns { string | false } returns contents of the file.
+ * @returns { string | false } returns contents of the file, 
+ * or false when the file doesn't exist.
  */
 
 async function getFileRecords(file) {
@@ -24,7 +25,8 @@ async function getFileRecords(file) {
 /**
  * This function retrieves files.
  * @param { string } file path to the file.
- * @returns { object | false } returns contents of the file as JSON.
+ * @returns { object | false } returns contents of the file as JSON, 
+ * or false when the file doesn't exist.
  */
 
 async function getFileRecordsAsJson(file) {
@@ -34,7 +36,8 @@ async function getFileRecordsAsJson(file) {
 /**
  * This function retrieves the lists of json files.
  * @param { string } dir path to the list of Json Files.
- * @returns { array | false } returns list of the Json files.
+ * @returns { array | false } returns list of the Json files, 
+ * or false when the directory doesn't exist.
  */
 
 async function getListOfJsonFiles(dir) {
@@ -54,14 +57,23 @@ async function getListOfJsonFiles(dir) {
 /**
  * This function retrieves the json from files in dir.
  * @param { string } dir path to the dir of Json Files.
- * @returns { array | false } returns an array of the Json files' contents.
+ * @returns { array | false } returns an array of the Json files' contents, 
+ * or false when the directory doesn't exist.
  */
 
 async function getJsonContentsFromDir(dir) {
+
   const listOfFilesInDir = await getListOfJsonFiles(dir);
-  const fixedListOfFilesInDir = listOfFilesInDir.map(fname => `${dir}${fname}`);
-  // return listOfFilesInDir.map(getFileRecordsAsJson);
-  throw (await Promise.all(fixedListOfFilesInDir.map(getFileRecordsAsJson))).flat();
+  if (listOfFilesInDir === false){
+    return false;
+  }
+  const fixedListOfFilesInDir = listOfFilesInDir.map(
+    (fname) => `${dir}${fname}`
+  );
+
+  return (
+    await Promise.all(fixedListOfFilesInDir.map(getFileRecordsAsJson))
+  ).flat();
 }
 
 export {

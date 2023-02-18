@@ -44,7 +44,7 @@ describe('getListOfJsonFiles', () => {
 describe('getJsonContentsFromDir', () => {
   test('goodread', async () => {
     const result = await getJsonContentsFromDir('./src/js/');
-    expect(result.length).toBe(6);
+    expect(result.length).toBe(600);
   });
 
   test('badread', async () => {
