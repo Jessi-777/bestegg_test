@@ -40,29 +40,25 @@ async function getListOfJsonFiles(dir) {
   try {
     const list = await readdir(dir);
     const filteredList = list.filter((item) => {
-      
       return item.endsWith('.json');
     });
-    
+
     return filteredList;
   } catch (err) {
     // there is no logging system to rely on
     return false;
   }
 }
- 
 
 /**
- * This function retrieves the all the json files in the dir.
+ * This function retrieves the all the json contents in the dir.
  * @param { object } dir path to the dir of Json Files.
  * @returns { object | false } returns list of the Json files.
  */
 
-async function getAllJsonFilesInDir(dir) {}
+async function getJsonContentsFromDir(dir) {
+  const listOfFilesInDir = await getListOfJsonFiles(dir);
+  return listOfFilesInDir.map(getFileRecordsAsJson);
+}
 
 export { getFileRecords, getFileRecordsAsJson, getListOfJsonFiles };
-
-
-
-
-
