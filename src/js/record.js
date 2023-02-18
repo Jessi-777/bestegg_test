@@ -59,11 +59,10 @@ async function getListOfJsonFiles(dir) {
 
 async function getJsonContentsFromDir(dir) {
   const listOfFilesInDir = await getListOfJsonFiles(dir);
-  return listOfFilesInDir.map(getFileRecordsAsJson);
+  const fixedListOfFilesInDir = listOfFilesInDir.map(fname => `${dir}${fname}`);
+  // return listOfFilesInDir.map(getFileRecordsAsJson);
+  throw (await Promise.all(fixedListOfFilesInDir.map(getFileRecordsAsJson))).flat();
 }
-
-
-
 
 export {
   getFileRecords,
