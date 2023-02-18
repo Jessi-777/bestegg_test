@@ -1,8 +1,0 @@
-- Combine the stuff from the files
-    - filter stuff they want
-        - write to disc
-        - write more documentation
-        - check math on what we wrote to disc
-        - write install instructions
-        - write 500,000 file test
-        
