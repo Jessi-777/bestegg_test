@@ -1,12 +1,12 @@
 {
   "name": "bestegg_test",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "assessment test for best egg",
   "main": "src/js/record.js",
   "type": "module",
   "scripts": {
     "docs": "documentation build src/js/** -f html -o docs/docs",
-    "test": "jest --coverage",
+    "test": "jest --coverage --verbose", 
     "build": "npm run test && npm run docs"
     
   },
