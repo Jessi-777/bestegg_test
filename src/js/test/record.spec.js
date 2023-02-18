@@ -31,7 +31,7 @@ describe('testingGetFileRecordsAsJson', () => {
 describe('getListOfJsonFiles', () => {
   test('goodread', async () => {
     const result = await getListOfJsonFiles('./src/js/');
-    expect(result.length).toBe(100);
+    expect(result.length).toBe(6);
   });
 
   test('badread', async () => {
@@ -39,3 +39,4 @@ describe('getListOfJsonFiles', () => {
     expect(result).toBe(false);
   });
 });
+

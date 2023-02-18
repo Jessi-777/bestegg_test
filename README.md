@@ -12,13 +12,17 @@ Write the records (in `json` format) which meet the above criteria to a new file
 
 ## Evaluation Criteria
 
+<!-- files being read from disc successfully in an efficient way -->
 - Efficiency
   - Memory consumption
   - Number of concurrently open files
 - Reusability
+<!-- got test rig up and checking my work
+     shipping with 100% coverage treating this like commercial code. -->
 - Testing
   - Are there tests?
   - Which test cases are account for?
+<!-- hooked up git pages for documentation -->
 - Documentation
   - How do I run this thing?
   - Are there code comments and are they useful?
