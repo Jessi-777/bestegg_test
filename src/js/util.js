@@ -13,6 +13,9 @@
 
 
 function seq(n) {
+  if(typeof n !== 'number') {
+    throw new Error('use a number clown');
+  }  
   const sequence = [];
   for (let i = 0; i < n; i++) {
     sequence.push(i);
