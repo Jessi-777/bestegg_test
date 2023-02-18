@@ -2,6 +2,7 @@ import {
   getFileRecords,
   getFileRecordsAsJson,
   getListOfJsonFiles,
+  getJsonContentsFromDir,
 } from '../record';
 
 describe('testingGetFileRecords', () => {
@@ -40,3 +41,14 @@ describe('getListOfJsonFiles', () => {
   });
 });
 
+describe('getJsonContentsFromDir', () => {
+  test('goodread', async () => {
+    const result = await getJsonContentsFromDir('./src/js/');
+    expect(result.length).toBe(6);
+  });
+
+  test('badread', async () => {
+    const result = await getJsonContentsFromDir('../src/fake');
+    expect(result).toBe(false);
+  });
+});

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>bestegg_test 0.6.0 | Documentation</title>
+  <title>bestegg_test 0.7.0 | Documentation</title>
   <meta name='description' content='assessment test for best egg'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>bestegg_test</h3>
-          <div class='mb1'><code>0.6.0</code></div>
+          <div class='mb1'><code>0.7.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -236,7 +236,7 @@
 
   <p>This function retrieves the lists of json files.</p>
 
-    <div class='pre p1 fill-light mt0'>getListOfJsonFiles(dir: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a> | <code>false</code>)</div>
+    <div class='pre p1 fill-light mt0'>getListOfJsonFiles(dir: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> | <code>false</code>)</div>
   
   
 
@@ -253,7 +253,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>dir</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+            <span class='code bold'>dir</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    path to the list of Json Files.
 
           </div>
@@ -268,7 +268,7 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a> | <code>false</code>)</code>:
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> | <code>false</code>)</code>:
         returns list of the Json files.
 
       
@@ -306,9 +306,9 @@
   </div>
   
 
-  <p>This function retrieves the all the json contents in the dir.</p>
+  <p>This function retrieves the json from files in dir.</p>
 
-    <div class='pre p1 fill-light mt0'>getJsonContentsFromDir(dir: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a> | <code>false</code>)</div>
+    <div class='pre p1 fill-light mt0'>getJsonContentsFromDir(dir: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> | <code>false</code>)</div>
   
   
 
@@ -325,7 +325,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>dir</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+            <span class='code bold'>dir</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    path to the dir of Json Files.
 
           </div>
@@ -340,8 +340,8 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a> | <code>false</code>)</code>:
-        returns list of the Json files.
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> | <code>false</code>)</code>:
+        returns an array of the Json files' contents.
 
       
     

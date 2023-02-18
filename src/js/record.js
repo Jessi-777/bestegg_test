@@ -13,6 +13,7 @@ async function getFileRecords(file) {
       return await readFile(file, 'utf8');
     } catch (err) {
       // there's no logging system to rely on
+      /* istanbul ignore next */
       return false;
     }
   } else {
@@ -32,8 +33,8 @@ async function getFileRecordsAsJson(file) {
 
 /**
  * This function retrieves the lists of json files.
- * @param { object } dir path to the list of Json Files.
- * @returns { object | false } returns list of the Json files.
+ * @param { string } dir path to the list of Json Files.
+ * @returns { array | false } returns list of the Json files.
  */
 
 async function getListOfJsonFiles(dir) {
@@ -51,9 +52,9 @@ async function getListOfJsonFiles(dir) {
 }
 
 /**
- * This function retrieves the all the json contents in the dir.
- * @param { object } dir path to the dir of Json Files.
- * @returns { object | false } returns list of the Json files.
+ * This function retrieves the json from files in dir.
+ * @param { string } dir path to the dir of Json Files.
+ * @returns { array | false } returns an array of the Json files' contents.
  */
 
 async function getJsonContentsFromDir(dir) {
@@ -61,4 +62,12 @@ async function getJsonContentsFromDir(dir) {
   return listOfFilesInDir.map(getFileRecordsAsJson);
 }
 
-export { getFileRecords, getFileRecordsAsJson, getListOfJsonFiles };
+
+
+
+export {
+  getFileRecords,
+  getFileRecordsAsJson,
+  getListOfJsonFiles,
+  getJsonContentsFromDir,
+};
