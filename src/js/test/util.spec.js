@@ -19,7 +19,6 @@ describe('sequence', () => {
 
 }); 
 
-
 describe('make fake record', () => {
     test('fake record is an object', () => {
         expect( typeof makeFakeRecord()).toBe('object'); 
@@ -33,6 +32,12 @@ describe('make fake record set', () => {
 
     test('test the right count of records for 3', () => {
         expect(makeFakeRecordSet(3).length).toBe(3);
+    });
+
+    test('test index value', () => {
+        const recordset = makeFakeRecordSet(3); 
+        expect(recordset[0].index).toBe(0);
+        expect(recordset[2].index).toBe(2);
     });
         
 });
