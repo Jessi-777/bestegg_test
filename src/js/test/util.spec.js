@@ -1,4 +1,4 @@
-import { seq, makeFakeRecord } from '../util.js'; 
+import { seq, makeFakeRecord, makeFakeRecordSet } from '../util.js'; 
 
 describe('sequence', () => {
     test('seq(4)', () => {
@@ -22,6 +22,17 @@ describe('sequence', () => {
 
 describe('make fake record', () => {
     test('fake record is an object', () => {
-        expect( typeof makeFakeRecord() === 'object'); 
+        expect( typeof makeFakeRecord()).toBe('object'); 
     });
+});
+
+describe('make fake record set', () => {
+    test('test the right count of records for 5', () => {
+        expect(makeFakeRecordSet(5).length).toBe(5);
+    });
+
+    test('test the right count of records for 3', () => {
+        expect(makeFakeRecordSet(3).length).toBe(3);
+    });
+        
 });

@@ -31,8 +31,8 @@ function makeFakeRecord() {
 
 
 function makeFakeRecordSet(count) {
-    const indices = seq(3);
-    throw indices.map(makeFakeRecord);
+    const indices = seq(count);
+    return indices.map(makeFakeRecord);
 
 }
 
