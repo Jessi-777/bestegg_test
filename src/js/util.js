@@ -1,3 +1,5 @@
+import { exampleDate } from './test/utilspec-data.js';
+
 /**
  * This function creates squence of numbers.
  *
@@ -102,6 +104,14 @@ function parseRecordSet(recordSet) {
     return recordSet.map(parseRecord);
 }
 
+function filterRecord(record) {
+    return record;
+}
+
+function filterRecordSet(recordSet) {
+    return recordSet.filter(filterRecord);
+}
+
 
 
 export {
@@ -115,5 +125,6 @@ export {
   parseRecordSet,
   clone,
   fixBalance,
+  filterRecordSet,
 
 };
