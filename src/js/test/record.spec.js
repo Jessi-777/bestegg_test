@@ -3,7 +3,9 @@ import {
   getFileRecordsAsJson,
   getListOfJsonFiles,
   getJsonContentsFromDir,
-} from '../record';
+  writeFileRecords,
+} from '../record.js';
+import { makeFakeRecordSet } from '../util.js';
 
 describe('testingGetFileRecords', () => {
   test('opening a file with a known length has correct size (138411 characters)', async () => {
@@ -51,4 +53,19 @@ describe('getJsonContentsFromDir', () => {
     const result = await getJsonContentsFromDir('../src/fake');
     expect(result).toBe(false);
   });
+});
+
+describe('writeFileRecords', () => {
+  test('writing a file with a known length has correct size (138411 characters)', async () => {
+    const result = await writeFileRecords(
+      './fakedata/fake_delivery_test.json', makeFakeRecordSet(10));
+    expect(result).toBe(undefined);
+    // write file actually returns undefined on success
+    // if it fails it will be false instead
+  });
+
+  // test('if we ask to write a file record that does not exist we should get false.', async () => {
+  //   const result = await writingFileRecords('../recordsdoesnotexist.json');
+  //   expect(result).toBe(false);
+  // });
 });

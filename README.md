@@ -32,3 +32,6 @@ Write the records (in `json` format) which meet the above criteria to a new file
 Imagine you have unlimted time and budget, how would you approach this solution differently if there were 500,000 files, each containing an indeterminate number of records? Assume the same efficiency evaluation criteria.
 
 You're free to make any assumptions you like outside of what I've outlined and would be helpful if you'd document them. If you require external dependencies, they should **not** be submitted with solution - an install and/or compilation step should included as part of the documentation.
+
+<!-- documentation docs url -->
+https://jessi-777.github.io/bestegg_test/docs/

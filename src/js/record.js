@@ -1,8 +1,8 @@
 const fs = require('fs');
-import { readFile, readdir } from 'node:fs/promises';
+import { readFile, readdir, writeFile } from 'node:fs/promises';
 
 /**
- * This function retrieves files.
+ * This function reads files.
  * @param { string } file path to the file.
  * @returns { string | false } returns contents of the file,
  * or false when the file doesn't exist.
@@ -25,7 +25,7 @@ async function getFileRecords(file) {
 /**
  * This function retrieves files.
  * @param { string } file path to the file.
- * @returns { object | false } returns contents of the file as JSON,
+ * @returns { object | false } returns contents of the file as JSON
  * or false when the file doesn't exist.
  */
 
@@ -36,7 +36,7 @@ async function getFileRecordsAsJson(file) {
 /**
  * This function retrieves the lists of json files.
  * @param { string } dir path to the list of Json Files.
- * @returns { array | false } returns list of the Json files,
+ * @returns { array | false } returns list of the Json files
  * or false when the directory doesn't exist.
  */
 
@@ -57,8 +57,9 @@ async function getListOfJsonFiles(dir) {
 /**
  * This function retrieves the json from files in dir.
  * @param { string } dir path to the dir of Json Files.
- * @returns { array | false } returns an array of the Json files' contents,
- * or false when the directory doesn't exist.
+ * @returns { array | false } returns an array of the Json files'
+ * contents or false when the directory doesn't exist.
+ * fixed list of files in dir to secure dir path.
  */
 
 async function getJsonContentsFromDir(dir) {
@@ -75,9 +76,31 @@ async function getJsonContentsFromDir(dir) {
   ).flat();
 }
 
+/**
+ * This module function writes files.
+ * @param { string } files path to the file.
+ * @returns { string | false } writes contents of the file
+ * or false when the file doesn't write.
+ */
+
+async function writeFileRecords(file, records) {
+  if (!(fs.existsSync(file))) {
+    try {
+      return await writeFile(file, JSON.stringify(records, undefined, 2));
+    } catch (err) {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+
+
+
 export {
   getFileRecords,
   getFileRecordsAsJson,
   getListOfJsonFiles,
   getJsonContentsFromDir,
+  writeFileRecords,
 };
