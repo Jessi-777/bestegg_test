@@ -72,6 +72,9 @@ describe('writeFileRecords', () => {
 
 describe('parseRecord', () => {
   test('parsing one record',  () => {
-    throw parseRecord(makeFakeRecord(0));
-  })
-})
+    const parsed = parseRecord(makeFakeRecord(0));
+    expect(typeof parsed.balance).toBe('number');
+    expect(typeof parsed.registered).toBe('object');
+  });
+});
+

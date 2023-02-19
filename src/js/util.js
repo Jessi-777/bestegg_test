@@ -63,7 +63,7 @@ function makeFakeId() {
  */
 
 function makeFakeRecord(id) {
-  return { index: id, _id: makeFakeId(), balance: "$3,624.10", };
+  return { index: id, _id: makeFakeId(), balance: "$3,624.10", registered: 0};
 }
 
 /**
@@ -85,10 +85,16 @@ function clone(record) {
     return record;
 }
 
+function fixDate(dateString) {
+   
+    return new Date(dateString);
+}
 
 function parseRecord(record) {
     const newRecord = clone(record);
+   
     newRecord.balance = fixBalance(newRecord.balance);
+    newRecord.registered = fixDate(newRecord.registered);
     return newRecord;
 }
 
