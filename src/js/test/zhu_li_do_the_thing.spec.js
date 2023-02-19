@@ -1,3 +1,4 @@
+import {seq} from '../util.js';
 
 test('stub', () => {
     expect(true).toBe(true);
@@ -5,14 +6,3 @@ test('stub', () => {
 
 
 
-function makeFakeRecord() {
-    return {};
-}
-
-
-
-
-
-function makeFakeRecordSet(count) {
-
-}

@@ -22,4 +22,18 @@ function seq(n) {
   }
   return sequence;
 }
-export { seq };
+
+
+
+function makeFakeRecord() {
+    return {};
+}
+
+
+function makeFakeRecordSet(count) {
+    const indices = seq(3);
+    throw indices.map(makeFakeRecord);
+
+}
+
+export { seq, makeFakeRecord, makeFakeRecordSet };

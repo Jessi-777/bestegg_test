@@ -1,4 +1,4 @@
-import { seq } from '../util.js'; 
+import { seq, makeFakeRecord } from '../util.js'; 
 
 describe('sequence', () => {
     test('seq(4)', () => {
@@ -17,5 +17,11 @@ describe('sequence', () => {
         expect (() => seq({})).toThrow();
     });
 
-
 }); 
+
+
+describe('make fake record', () => {
+    test('fake record is an object', () => {
+        expect( typeof makeFakeRecord() === 'object'); 
+    });
+});
