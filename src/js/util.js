@@ -78,7 +78,7 @@ function makeFakeRecordSet(count) {
 }
 
 function fixBalance(balanceString) {
-    return 'zzz';
+    return Number(balanceString.replace(/[^\d\.-]/g, ''));
 }
 
 function clone(record) {
