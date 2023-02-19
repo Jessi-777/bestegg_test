@@ -5,7 +5,7 @@ import {
   getJsonContentsFromDir,
   writeFileRecords,
 } from '../record.js';
-import { makeFakeRecordSet } from '../util.js';
+import { makeFakeRecordSet, parseRecord, makeFakeRecord } from '../util.js';
 
 describe('testingGetFileRecords', () => {
   test('opening a file with a known length has correct size (138411 characters)', async () => {
@@ -69,3 +69,9 @@ describe('writeFileRecords', () => {
   //   expect(result).toBe(false);
   // });
 });
+
+describe('parseRecord', () => {
+  test('parsing one record',  () => {
+    throw parseRecord(makeFakeRecord(0));
+  })
+})

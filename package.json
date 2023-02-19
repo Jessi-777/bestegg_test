@@ -1,11 +1,11 @@
 {
   "name": "bestegg_test",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "description": "assessment test for best egg",
   "main": "src/js/record.js",
   "type": "module",
   "scripts": {
-    "clean": "rimraf fakedata && mkdir fakedata && rimraf docs && mkdir docs",
+    "clean": "rimraf fakedata && mkdir fakedata && rimraf docs && mkdir docs && rimraf output && mkdir output",
     "docs": "typedoc src/js/*.js --out docs/docs",
     "test": "jest --coverage --verbose",
     "build": "npm run clean && npm run test && npm run docs"
@@ -14,8 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/Jessi-777/bestegg_test.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jessi Chavez <ticareyproductions@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Jessi-777/bestegg_test/issues"
   },

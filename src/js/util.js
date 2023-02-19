@@ -63,7 +63,7 @@ function makeFakeId() {
  */
 
 function makeFakeRecord(id) {
-  return { index: id, _id: makeFakeId() };
+  return { index: id, _id: makeFakeId(), balance: "$3,624.10", };
 }
 
 /**
@@ -77,6 +77,27 @@ function makeFakeRecordSet(count) {
   return indices.map((i) => makeFakeRecord(i));
 }
 
+function fixBalance(balanceString) {
+    return 'zzz';
+}
+
+function clone(record) {
+    return record;
+}
+
+
+function parseRecord(record) {
+    const newRecord = clone(record);
+    newRecord.balance = fixBalance(newRecord.balance);
+    return newRecord;
+}
+
+function parseRecordSet(recordSet) {
+    return recordSet.map(parseRecord);
+}
+
+
+
 export {
   seq,
   makeFakeRecord,
@@ -84,4 +105,9 @@ export {
   makeFakeId,
   makeFakeIdLetter,
   rand,
+  parseRecord,
+  parseRecordSet,
+  clone,
+  fixBalance,
+
 };
