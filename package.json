@@ -1,12 +1,12 @@
 {
   "name": "bestegg_test",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "assessment test for best egg",
   "main": "src/js/record.js",
   "type": "module",
   "scripts": {
     "clean": "rimraf fakedata && mkdir fakedata && rimraf docs && mkdir docs",
-    "docs": "typedoc src/js/index.js",
+    "docs": "typedoc src/js/*.js --out docs/docs",
     "test": "jest --coverage --verbose",
     "build": "npm run clean && npm run test && npm run docs"
   },
