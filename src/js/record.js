@@ -1,8 +1,6 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 
-
-
 /**
  * This function reads files.
  * @param { string } file path to the file.
@@ -13,7 +11,6 @@ import { existsSync } from 'node:fs';
 async function getFileRecords(file) {
   if (existsSync(file)) {
     try {
-      console.log(file);
       return await readFile(file, 'utf8');
     } catch (err) {
       // there's no logging system to rely on
@@ -91,6 +88,7 @@ async function writeFileRecords(file, records) {
     try {
       return await writeFile(file, JSON.stringify(records, undefined, 2));
     } catch (err) {
+      /* istanbul ignore next */
       return false;
     }
   } else {

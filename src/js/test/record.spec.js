@@ -63,11 +63,11 @@ describe('writeFileRecords', () => {
     // write file actually returns undefined on success
     // if it fails it will be false instead
   });
-
-  // test('if we ask to write a file record that does not exist we should get false.', async () => {
-  //   const result = await writingFileRecords('../recordsdoesnotexist.json');
-  //   expect(result).toBe(false);
-  // });
+  test('should fail when writing to a file that already exists', async() => {
+    writeFileRecords('./fakedata/overwritetest.json', [1]);
+    const temp = await writeFileRecords('./fakedata/overwritetest.json', [2]);
+    expect(temp).toBe(false);
+  });
 });
 
 describe('parseRecord', () => {
