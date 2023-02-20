@@ -105,12 +105,16 @@ function parseRecordSet(recordSet) {
 }
 
 function filterRecord(record) {
-    return record;
+    return record.isActive && (record.balance > 2000);
 }
 
 function filterRecordSet(recordSet) {
+  
     return recordSet.filter(filterRecord);
 }
+
+
+
 
 
 

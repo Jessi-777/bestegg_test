@@ -84,7 +84,7 @@ const exampleDate = [
       "_id": "5c21a63a9890e8d3535a5382",
       "index": 2,
       "guid": "489c0569-cdf6-4a1a-bd9f-aec5bec26609",
-      "isActive": false,
+      "isActive": true,
       "balance": "$2,868.79",
       "picture": "http://placehold.it/32x32",
       "age": 28,
