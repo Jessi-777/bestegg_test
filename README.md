@@ -8,8 +8,13 @@ This test is made in Javascript it is able to retrieve `json` files, each which 
 
 
 
+
 ## Instructions for Test and Documentation
-To test this repo simply run npm run build. Look in the output directory afterwards at newresults.json
+I did a lot of testing in here to make sure each function works 100%.
+
+To test this repo simply run npm run build. 
+
+To find the Results for new updated json files look in the output directory afterwards at newresults.json
 
 * Typedoc(installed Typscript only for testing purposes): https://jessi-777.github.io/bestegg_test/docs/
 
