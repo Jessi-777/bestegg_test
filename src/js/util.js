@@ -24,9 +24,13 @@ function seq(n) {
   return sequence;
 }
 
+
+
 function rand(n) {
   return Math.trunc(Math.random() * n);
 }
+
+
 
 function makeFakeIdLetter() {
   const letters = [
@@ -50,6 +54,8 @@ function makeFakeIdLetter() {
   return letters[rand(letters.length)];
 }
 
+
+
 /**
  * This function makes a fake id.
  * @returns { string } returns a fake id.
@@ -58,6 +64,8 @@ function makeFakeIdLetter() {
 function makeFakeId() {
   return seq(24).map(makeFakeIdLetter).join('');
 }
+
+
 
 /**
  * This function makes a fake record.
@@ -79,18 +87,26 @@ function makeFakeRecordSet(count) {
   return indices.map((i) => makeFakeRecord(i));
 }
 
+
+
 function fixBalance(balanceString) {
     return Number(balanceString.replace(/[^\d\.-]/g, ''));
 }
+
+
 
 function clone(record) {
     return record;
 }
 
+
+
 function fixDate(dateString) {
    
     return new Date(dateString);
 }
+
+
 
 function parseRecord(record) {
     const newRecord = clone(record);
@@ -100,18 +116,60 @@ function parseRecord(record) {
     return newRecord;
 }
 
+
+
 function parseRecordSet(recordSet) {
+
     return recordSet.map(parseRecord);
+
 }
 
+
+
 function filterRecord(record) {
-    return record.isActive && (record.balance > 2000);
+    const cutOff = new Date('January 1, 2016');
+
+    return record.isActive 
+       && (record.balance > 2000)
+       && (record.registered > cutOff);
+      
 }
+
+
 
 function filterRecordSet(recordSet) {
   
     return recordSet.filter(filterRecord);
 }
+
+// I can't tell if this is actually correct 
+// All of the lines are formatted with us dates
+// This could mean always us dates, or this could mean javascript notation
+// because this is json I'm guessing javascript notation
+// it could be either and getting this wrong is dangerous
+function wreckBalance(balance) {
+    return `$${balance.toLocaleString()}`;
+}
+
+
+function wreckDate(date) {
+    return date;
+}
+
+
+function wreckRecord(record) {
+    const newRecord = clone(record);
+   
+    newRecord.balance = wreckBalance(newRecord.balance);
+    newRecord.registered = wreckDate(newRecord.registered);
+    return newRecord;
+}
+
+
+
+function wreckRecordSet(recordSet) {
+    return recordSet.map(wreckRecord);
+};
 
 
 
@@ -130,5 +188,8 @@ export {
   clone,
   fixBalance,
   filterRecordSet,
-
+  exampleDate,
+  wreckRecord,
+  wreckRecordSet,
+  
 };

@@ -1,18 +1,19 @@
-import { getFileRecords } from './record';
+import { getJsonContentsFromDir, writeFileRecords } from './record.js';
+import { parseRecordSet, filterRecordSet, wreckRecordSet } from './util.js'; 
 
-const callBack = (err, jsonString) => {
-  if (err) {
-    console.log('File read failed:', err);
-    return;
-  }
 
-  console.log('File data:', jsonString);
-};
 
-function double(x) {
-  return x * 2;
-}
-export { double, callBack, getFileRecords };
+const jsonContents  = await getJsonContentsFromDir('./src/js/');
+const unfilteredSet = parseRecordSet(jsonContents);
+const filteredSet   = filterRecordSet(unfilteredSet);
+const wreckedSet    = wreckRecordSet(filteredSet);
+
+
+writeFileRecords('./output/newresults.json', wreckedSet);
+
+
+export { getJsonContentsFromDir, writeFileRecords, parseRecordSet, wreckRecordSet };
+
 
 
 

@@ -1,3 +1,4 @@
+
 const exampleDate = [
     {
       "_id": "5c21a63a1e4bb8d6a7d1ffa0",
@@ -17,7 +18,7 @@ const exampleDate = [
       "phone": "+1 (937) 418-3892",
       "address": "190 Joralemon Street, Talpa, Hawaii, 4597",
       "about": "Veniam ut officia exercitation eiusmod officia nulla id est consectetur. Laboris excepteur id dolore consequat dolore ad deserunt anim anim. Eu ea ad cupidatat consequat duis id ut elit adipisicing ea minim irure ullamco voluptate. Irure reprehenderit duis esse esse dolore voluptate ad. Reprehenderit veniam qui velit cupidatat. Veniam consectetur aliquip quis sit laboris sint adipisicing occaecat occaecat consequat sint.",
-      "registered": "Friday, October 5, 2017 6:26 PM",
+      "registered": "Friday, October 5, 2018 6:26 PM",
       "latitude": "-59.473097",
       "longitude": "118.295711",
       "tags": ["adipisicing", "incididunt", "deserunt", "commodo", "nisi"],
@@ -84,7 +85,7 @@ const exampleDate = [
       "_id": "5c21a63a9890e8d3535a5382",
       "index": 2,
       "guid": "489c0569-cdf6-4a1a-bd9f-aec5bec26609",
-      "isActive": true,
+      "isActive": false,
       "balance": "$2,868.79",
       "picture": "http://placehold.it/32x32",
       "age": 28,
@@ -98,7 +99,7 @@ const exampleDate = [
       "phone": "+1 (838) 481-3643",
       "address": "300 Frank Court, Roeville, Minnesota, 705",
       "about": "Aute laborum exercitation occaecat ipsum excepteur elit aute elit nostrud minim nostrud non eu aliquip. Mollit commodo do eu elit nulla sunt incididunt. Velit fugiat consectetur dolor eiusmod aute anim ea pariatur dolor eu fugiat nostrud. Adipisicing dolore ut duis sit. Qui fugiat ad voluptate sit sunt pariatur cillum consequat in qui Lorem est voluptate. Id laboris amet amet nostrud est ea magna nostrud sit duis.",
-      "registered": "Sunday, March 6, 2017 4:47 AM",
+      "registered": "Sunday, March 6, 2016 4:47 AM",
       "latitude": "68.382259",
       "longitude": "142.889109",
       "tags": ["esse", "veniam", "fugiat", "magna", "ullamco"],
@@ -138,7 +139,7 @@ const exampleDate = [
       "phone": "+1 (918) 417-3118",
       "address": "765 Tampa Court, Edgewater, Montana, 8855",
       "about": "Sint dolor incididunt non est enim ut elit nisi nostrud ipsum et laborum dolore officia. Eiusmod esse duis esse enim nulla exercitation sint ex et sunt consectetur. Sint est velit ut consequat occaecat velit laboris do magna esse Lorem Lorem. Consequat eu veniam do tempor id voluptate ipsum proident. Nisi irure nostrud tempor cupidatat labore qui mollit Lorem deserunt ipsum do minim. Est dolor culpa dolore elit quis ea mollit deserunt. Fugiat labore amet ad consequat sit nisi.",
-      "registered": "Wednesday, May 25, 2015 6:35 AM",
+      "registered": "Wednesday, May 25, 2016 6:35 AM",
       "latitude": "-83.073674",
       "longitude": "100.033043",
       "tags": ["eu", "adipisicing", "elit", "consectetur", "ex"],
@@ -161,6 +162,6 @@ const exampleDate = [
       "favoriteFruit": "banana"
     },
     
-];
+]
 
-export { exampleDate }; 
+export { exampleDate } 

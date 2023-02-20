@@ -1,5 +1,7 @@
-const fs = require('fs');
 import { readFile, readdir, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+
+
 
 /**
  * This function reads files.
@@ -9,8 +11,9 @@ import { readFile, readdir, writeFile } from 'node:fs/promises';
  */
 
 async function getFileRecords(file) {
-  if (fs.existsSync(file)) {
+  if (existsSync(file)) {
     try {
+      console.log(file);
       return await readFile(file, 'utf8');
     } catch (err) {
       // there's no logging system to rely on
@@ -84,7 +87,7 @@ async function getJsonContentsFromDir(dir) {
  */
 
 async function writeFileRecords(file, records) {
-  if (!(fs.existsSync(file))) {
+  if (!existsSync(file)) {
     try {
       return await writeFile(file, JSON.stringify(records, undefined, 2));
     } catch (err) {
@@ -94,11 +97,6 @@ async function writeFileRecords(file, records) {
     return false;
   }
 }
-
-
-
-
-
 
 export {
   getFileRecords,

@@ -1,4 +1,4 @@
-import { seq, makeFakeRecord, makeFakeRecordSet, filterRecordSet, parseRecordSet } from '../util.js'; 
+import { seq, makeFakeRecord, makeFakeRecordSet, filterRecordSet, parseRecordSet, filterRecord } from '../util.js'; 
 import { exampleDate } from './utilspec-data.js';
 
 describe('sequence', () => {
@@ -17,7 +17,6 @@ describe('sequence', () => {
     test('seq({}) should throw', () => {
         expect (() => seq({})).toThrow();
     });
-
 }); 
 
 describe('make fake record', () => {
@@ -39,14 +38,14 @@ describe('make fake record set', () => {
         const recordset = makeFakeRecordSet(3); 
         expect(recordset[0].index).toBe(0);
         expect(recordset[2].index).toBe(2);
-    });
-        
+    });        
 });
 
 describe('make filtered record set', () => {
     test('test to filter through the records', () => {
         expect(filterRecordSet(parseRecordSet(exampleDate)).length).toStrictEqual(1); 
-
     });
 });
+
+
 
