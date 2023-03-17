@@ -1,6 +1,6 @@
-Please review the instructions below to complete the assignment. When complete, please share a private GitHub repository with the user [recursivefunk](https://github.com/recursivefunk), containing your solution.
 
-## Instructions
+
+## Data Test Instructions
 
 There are 6 `json` files, each of which contains 100 people records. In the language of your choice (although, JavaScript is preferred), please sift through the records in each of the files and distill the total records (across _all_ files) down to people who:
 
@@ -33,5 +33,4 @@ Imagine you have unlimted time and budget, how would you approach this solution 
 You're free to make any assumptions you like outside of what I've outlined and would be helpful if you'd document them. If you require external dependencies, they should **not** be submitted with solution - an install and/or compilation step should included as part of the documentation.
 
 <!-- documentation docs url -->
-
-https://jessi-777.github.io/bestegg_test/docs/
+https://github.com/Jessi-777/data_testing
