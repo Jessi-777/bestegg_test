@@ -1,6 +1,6 @@
-# BestEgg Test
+# Data Test
 
-* This repo is written by Jessica Chavez for BestEgg testing. Yay ^_^ 
+* This repo is written by Jessica Chavez for Data Testing. ^_^ 
 This test is made in Javascript it is able to retrieve `json` files, each which contains 100 people records filtering through data retrieving 3 fields. 
 - Retrieving json files that are `active`. 
 - Retrieving json files`balances` that exceed $2000. 
@@ -16,7 +16,7 @@ To test this repo simply run npm run build.
 
 To find the Results for new updated json files look in the output directory afterwards at newresults.json
 
-* Typedoc(installed Typscript only for testing purposes): https://jessi-777.github.io/bestegg_test/docs/
+* Typedoc(installed Typscript only for testing purposes): 
 
 To run the repo type `npm install`. 
 
@@ -32,7 +32,7 @@ You can find my write up imagination idea in the directory inside two files call
 - `zhu_li_do_the_thing.spec.js` 
 - `utils.js` 
 
-In these files I'm generating a sequence of fake files and fake id's. The ideas was to generate random sizes of files to see it's performance function, but I ran out of time.
+In these files I'm generating a sequence of fake files and fake id's. The ideas was to generate random sizes of files to see it's performance function.
 
 
 
