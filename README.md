@@ -1,4 +1,4 @@
-# Data Test
+# Data Testing
 
 * This repo is written by Jessica Chavez for Data Testing. ^_^ 
 This test is made in Javascript it is able to retrieve `json` files, each which contains 100 people records filtering through data retrieving 3 fields. 
