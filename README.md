@@ -16,11 +16,11 @@ To test this repo simply run npm run build.
 
 To find the Results for new updated json files look in the output directory afterwards at newresults.json
 
-* Typedoc(installed Typscript only for testing purposes): 
+* Typedoc(installed Typscript only for testing purposes): https://github.com/Jessi-777/data_testing
 
 To run the repo type `npm install`. 
 
-* GitHub Repo: https://github.com/Jessi-777/bestegg_test
+* GitHub Repo: https://github.com/Jessi-777/data_testing
 
 
 
