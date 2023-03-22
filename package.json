@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jessi-777/bestegg_test.git"
+    "url": "git+https://github.com/Jessi-777/data_testing.git"
   },
   "author": "Jessi Chavez <ticareyproductions@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Jessi-777/bestegg_test/issues"
+    "url": "https://github.com/Jessi-777/data_testing/issues"
   },
-  "homepage": "https://github.com/Jessi-777/bestegg_test#readme",
+  "homepage": "https://github.com/Jessi-777/datag_testing#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "jest": "^29.4.3",
