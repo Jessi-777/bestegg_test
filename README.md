@@ -32,7 +32,7 @@ You can find my write up imagination idea in the directory inside two files call
 - `zhu_li_do_the_thing.spec.js` 
 - `utils.js` 
 
-In these files I'm generating a sequence of fake files and fake id's. The ideas was to generate random sizes of files to see it's performance function, but I ran out of time.
+In these files I'm generating a sequence of fake files and fake id's. The ideas was to generate random sizes of files to see it's performance function. I'm working on it. ^_^
 
 
 

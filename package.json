@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Jessi-777/data_testing/issues"
   },
-  "homepage": "https://github.com/Jessi-777/datag_testing#readme",
+  "homepage": "https://github.com/Jessi-777/data_testing#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "jest": "^29.4.3",

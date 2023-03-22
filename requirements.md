@@ -1,5 +1,3 @@
-Please review the instructions below to complete the assignment. When complete, please share a private GitHub repository with the user [recursivefunk](https://github.com/recursivefunk), containing your solution.
-
 ## Instructions
 
 There are 6 `json` files, each of which contains 100 people records. In the language of your choice (although, JavaScript is preferred), please sift through the records in each of the files and distill the total records (across _all_ files) down to people who:
@@ -34,4 +32,4 @@ You're free to make any assumptions you like outside of what I've outlined and w
 
 <!-- documentation docs url -->
 
-https://jessi-777.github.io/bestegg_test/docs/
+https://jessi-777.github.io/data_testing/docs/
